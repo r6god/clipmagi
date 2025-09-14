@@ -5,6 +5,7 @@ import { ArrowRight, Play } from 'lucide-react'
 export default function Hero(){
   return (
     <section className="relative hero-gradient overflow-hidden">
+      {/* decorative blobs if your project has them; harmless if not */}
       <img src="/blob1.png" alt="" className="pointer-events-none absolute -top-40 -left-20 w-[520px] opacity-40 blur-2xl" />
       <img src="/blob2.png" alt="" className="pointer-events-none absolute -bottom-40 -right-20 w-[620px] opacity-30 blur-2xl" />
 
@@ -20,31 +21,13 @@ export default function Hero(){
           </div>
         </div>
 
-        {/* RIGHT: autoplaying, muted, looping video with user interaction disabled */}
-        <motion.div initial={{opacity:0,scale:0.96}} animate={{opacity:1,scale:1}} transition={{duration:0.6,delay:0.1}}
-          className="relative card p-4 backdrop-blur-xl border-white/20">
-          <div className="aspect-[9/16] w-full rounded-2xl overflow-hidden bg-black/40 relative">
-            <video
-              src="/demo.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              tabIndex={-1}
-              onPause={(e) => e.currentTarget.play()}
-              onEnded={(e) => e.currentTarget.play()}
-              onContextMenu={(e) => e.preventDefault()}
-              className="w-full h-full object-cover select-none pointer-events-none"
-              poster="/clipmagi_icon.png"
-              disableRemotePlayback
-            />
-            {/* Transparent overlay to swallow any clicks/taps just in case */}
-            <div className="absolute inset-0" aria-hidden="true" />
+        {/* RIGHT: your video inside the device frame */}
+        <motion.div initial={{opacity:0,scale:0.96}} animate={{opacity:1,scale:1}} transition={{duration:0.6,delay:0.1}} className="relative card p-4 backdrop-blur-xl border-white/20">
+          <div className="aspect-[9/16] w-full rounded-2xl overflow-hidden bg-black/40">
+            <video src="/demo.mp4" controls playsInline muted loop preload="metadata"
+                   className="w-full h-full object-cover" poster="/clipmagi_icon.png" />
           </div>
-          <div className="absolute -bottom-6 -right-6 bg-white text-black px-4 py-2 rounded-xl text-sm font-semibold shadow-xl">
-            30–45s Short • 1080×1920
-          </div>
+          <div className="absolute -bottom-6 -right-6 bg-white text-black px-4 py-2 rounded-xl text-sm font-semibold shadow-xl">30–45s Short • 1080×1920</div>
         </motion.div>
       </div>
     </section>
