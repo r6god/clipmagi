@@ -5,19 +5,51 @@
 :root { color-scheme: dark; }
 body {
   @apply bg-bg text-white;
-  background: radial-gradient(1000px 600px at 0% 0%, rgba(0,229,255,0.07), transparent 40%),
-              radial-gradient(900px 500px at 100% 100%, rgba(0,229,255,0.06), transparent 40%),
-              linear-gradient(180deg, #0A0E12 0%, #12141E 100%);
+  background:
+    radial-gradient(1200px 700px at 0% 0%, rgba(0,229,255,0.12), transparent 45%),
+    radial-gradient(1000px 580px at 100% 100%, rgba(0,229,255,0.10), transparent 45%),
+    linear-gradient(180deg, #0A0E12 0%, #12141E 100%);
 }
+
 .container { @apply mx-auto max-w-7xl px-6; }
-.card { @apply bg-white/5 border border-white/10 rounded-2xl; }
+
+.card {
+  @apply rounded-2xl border;
+  border-color: rgba(255,255,255,0.12);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  box-shadow: 0 10px 40px rgba(0,229,255,0.08);
+}
+
 .btn { @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold transition; }
-.btn-primary { @apply bg-cyan-brand text-black hover:bg-[#01d3e3] shadow-glow; }
+.btn-primary {
+  color: #0b0f14;
+  background: linear-gradient(90deg, #00E5FF 0%, #7AD9FF 100%);
+  box-shadow: 0 0 40px rgba(0,229,255,0.25);
+}
+.btn-primary:hover { filter: brightness(0.95); }
 .btn-ghost { @apply bg-white/10 hover:bg-white/20; }
-.hero-gradient { background: radial-gradient(50% 50% at 10% 0%, rgba(0,229,255,0.15), transparent 50%); }
+
 .gradient-text {
   background: linear-gradient(90deg, #FFFFFF 0%, #A7F8FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; color: transparent;
 }
+
+.hero-gradient::before,
+.hero-gradient::after {
+  content: "";
+  position: absolute; inset: -10% -10% auto auto;
+  width: 520px; height: 520px; border-radius: 9999px;
+  background: radial-gradient(circle, rgba(0,229,255,0.14), transparent 60%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+.hero-gradient::after {
+  inset: auto auto -10% -10%;
+  width: 620px; height: 620px;
+  background: radial-gradient(circle, rgba(0,229,255,0.12), transparent 60%);
+}
+
+.ring-cyan { box-shadow: 0 0 0 1px rgba(0,229,255,0.35), 0 10px 30px rgba(0,229,255,0.18) inset; }
