@@ -1,0 +1,1 @@
+export default function CTA(){return (<section id="cta" className="container pb-24"><div className="card p-6 md:p-10 text-center relative overflow-hidden"><div className="absolute inset-0 bg-[radial-gradient(600px_300px_at_50%_-10%,rgba(0,229,255,0.1),transparent)]"/></div></section>) }

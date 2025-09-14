@@ -1,2 +1,3 @@
-import clsx, { ClassValue } from 'clsx'
-export function cn(...inputs: ClassValue[]) { return clsx(inputs) }
+export function cn(...classes: (string | false | null | undefined)[]) {
+  return classes.filter(Boolean).join(' ')
+}
