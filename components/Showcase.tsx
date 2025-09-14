@@ -1,3 +1,5 @@
+'use client'
+
 export default function Showcase() {
   const vids = [
     '/recent/clip1.mp4',
@@ -23,11 +25,10 @@ export default function Showcase() {
                 muted
                 loop
                 playsInline
-                preload="auto"
-                className="w-full h-full object-cover pointer-events-none select-none"
-                onPause={(e) => e.currentTarget.play()}
-                onEnded={(e) => e.currentTarget.play()}
+                preload="metadata"
                 disableRemotePlayback
+                className="w-full h-full object-cover pointer-events-none select-none"
+                aria-hidden="true"
               />
               <div className="absolute inset-0" aria-hidden="true" />
             </div>
