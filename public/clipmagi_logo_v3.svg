@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <rect width="900" height="260" fill="#0A0E12"/>
+  <g transform="translate(130,130)">
+    <g stroke="#00E5FF" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 0,-70 L 60,35 L -60,35 Z"/>
+    </g>
+    <g stroke="#00E5FF" stroke-width="10" stroke-linecap="round">
+      <line x1="-30" y1="-15" x2="40" y2="40"/>
+    </g>
+  </g>
+  <text x="260" y="160" font-family="Inter, Arial, sans-serif" font-size="96" fill="#F5F5F8" letter-spacing="0.5">ClipMagi</text>
+</svg>
