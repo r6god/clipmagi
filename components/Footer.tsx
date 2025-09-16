@@ -1,1 +1,22 @@
-export default function Footer(){return (<footer className="border-t border-white/10 py-10 text-sm text-white/60"><div className="container flex flex-col md:flex-row items-center justify-between gap-3"><div className="flex items-center gap-3"><img src="/clipmagi_icon.png" alt="icon" className="w-6 h-6"/><span>© {new Date().getFullYear()} ClipMagi</span></div><div className="flex items-center gap-4"><a href="#" className="hover:text-white">Terms</a><a href="#" className="hover:text-white">Privacy</a></div></div></footer>) }
+export default function Footer(){
+  return (
+    <footer className="border-t border-white/10 py-10 text-sm text-white/60">
+      <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <img src="/clipmagi_icon.png" alt="icon" className="w-6 h-6"/>
+          <span>© {new Date().getFullYear()} ClipMagi</span>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <a href="https://x.com/ClipMagi" target="_blank" rel="noreferrer" className="hover:text-white">X/Twitter</a>
+          <a href="https://t.me/clipmagi" target="_blank" rel="noreferrer" className="hover:text-white">Telegram</a>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <a href="#" className="hover:text-white">Terms</a>
+          <a href="#" className="hover:text-white">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  )
+}
